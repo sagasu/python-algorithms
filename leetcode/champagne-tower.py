@@ -11,5 +11,5 @@ class Solution:
                     filled[row + 1][col]    += overfill / 2.0
                     filled[row + 1][col +1] += overfill /2.0
 
-
-        return filled[query_row][query_glass]
+        # if needs to be here because we are not removing overfill from glasses that are overflowing, the maximum they can hold is 1
+        return filled[query_row][query_glass] if filled[query_row][query_glass] <= 1 else 1
