@@ -1,2 +1,2 @@
 # pythonPlayground
-Calling various SOAP methods via python
+Algorithms in python and some python abuse.
