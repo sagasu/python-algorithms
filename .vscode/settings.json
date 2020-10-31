@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./leetcode/summary-ranges/",
+        "./leetcode/longest_increasing_subsequence",
         "-p",
         "*_test.py"
     ],
