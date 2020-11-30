@@ -25,6 +25,6 @@ class Solution:
                     current_heights.add(height)
                 else:
                     current_heights.remove(height)
-                if len(results) == 0 or results[-1][1] != current_heights[-1]:
-                    results.append([x, current_heights[-1]])
+            if len(results) == 0 or results[-1][1] != current_heights[-1]:
+                results.append([x, current_heights[-1]])
         return results
