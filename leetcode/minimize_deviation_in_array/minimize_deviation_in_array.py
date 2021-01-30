@@ -6,7 +6,7 @@ class Solution:
         
         for x in nums:
             if x % 2 == 0:
-                hepq.heappush(heap, -x)
+                heapq.heappush(heap, -x)
                 smallest = min(smallest, x)
 
             else:
