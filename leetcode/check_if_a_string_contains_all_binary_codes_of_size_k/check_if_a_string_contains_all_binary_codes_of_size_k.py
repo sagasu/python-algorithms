@@ -17,6 +17,6 @@ class Solution:
             current %= M
 
             if index >= k - 1:
-                seen[current] = True
+                seen[current] = True 
                 
         return all(seen) 
