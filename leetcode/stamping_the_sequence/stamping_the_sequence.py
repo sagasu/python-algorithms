@@ -28,7 +28,6 @@ class Solution:
                     ans.append(start)
                     break
 
-            print(target, ans)
             if all(x == "*" for x in target):
                 break
 
@@ -41,7 +40,6 @@ class Solution:
             for k in range(M):
                 constructed[index + k] = stamp[k]
 
-        print(ans, "".join(constructed))
         if "".join(constructed) == old_target:
             return ans
         return []
