@@ -10,7 +10,7 @@ class Solution:
 
         def uunion(ca, cb):
             pa = ufind(ca)
-            bp = ufind(cb)
+            pb = ufind(cb)
             parents[pa] = pb
 
         events = []
