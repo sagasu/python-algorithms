@@ -1,10 +1,12 @@
 # Advent of Code 2021
 
+Solutions for day < 11 are written in C# and available her [days < 11 C#](https://github.com/sagasu/Algo-DataStructures/tree/master/AlgoTest/AOC2021)
+
 <https://adventofcode.com/2021>
 
-![](https://img.shields.io/badge/day%20📅-24-blue)
-![](https://img.shields.io/badge/stars%20⭐-48-yellow)
-![](https://img.shields.io/badge/days%20completed-24-red)
+![](https://img.shields.io/badge/day%20📅-25-blue)
+![](https://img.shields.io/badge/stars%20⭐-50-yellow)
+![](https://img.shields.io/badge/days%20completed-25-red)
 
 <!--- advent_readme_stars table --->
 ## 2021 Results
@@ -35,4 +37,5 @@
 | [Day 22](https://adventofcode.com/2021/day/22) | ⭐ | ⭐ |
 | [Day 23](https://adventofcode.com/2021/day/23) | ⭐ | ⭐ |
 | [Day 24](https://adventofcode.com/2021/day/24) | ⭐ | ⭐ |
+| [Day 24](https://adventofcode.com/2021/day/25) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
