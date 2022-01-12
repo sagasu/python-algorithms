@@ -1,3 +1,5 @@
+
+
 class Solution:
     def insertIntoBST(self, root, val):
         """
@@ -9,7 +11,7 @@ class Solution:
             return TreeNode(val)
         p = root
         while p:
-            if val < p.val:
+            if val < p.val: 
                 if p.left:
                     p = p.left
                 else:
