@@ -5,7 +5,7 @@ class Solution:
     def numberOfSubmatrices(self, grid: List[List[str]]) -> int:
         m, n = len(grid), len(grid[0])
 
-        # px[i][j] = count of 'X' in submatrix (0,0)..(i,j)
+        # px[i][j] = count of 'X' in submatrix (0,0)..(i,j) 
         # py[i][j] = count of 'Y' in submatrix (0,0)..(i,j)
         px = [[0] * n for _ in range(m)]
         py = [[0] * n for _ in range(m)]
