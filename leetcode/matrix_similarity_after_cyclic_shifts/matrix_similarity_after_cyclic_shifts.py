@@ -7,7 +7,7 @@ class Solution:
         shift = k % n  # effective shift after full cycles cancel out
 
         if shift == 0:
-            return True  # every row is back to original
+            return True  # every row is back to original 
 
         for i, row in enumerate(mat):
             if i % 2 == 0:
