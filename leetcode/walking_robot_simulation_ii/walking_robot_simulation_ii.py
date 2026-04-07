@@ -5,7 +5,8 @@ class Robot:
         # Note: (0,0) at index 0 gets direction 'South' (after a full loop),
         # but initially the robot faces 'East' — handled via isOrigin flag.
         self.pos = (
-            [((x, 0), 'East') for x in range(width)]          # bottom: left to right
+            [((0, 0), 'South')]                                # origin corner (direction after full loop)
+            + [((x, 0), 'East') for x in range(1, width)]     # bottom: left to right
             + [((width-1, y), 'North') for y in range(1, height)]  # right: bottom to top
             + [((x, height-1), 'West') for x in range(width-2, -1, -1)]  # top: right to left
             + [((0, y), 'South') for y in range(height-2, 0, -1)]   # left: top to bottom
@@ -22,5 +23,5 @@ class Robot:
 
     def getDir(self) -> str:
         if self.is_origin:
-            return 'East'
-        return self.pos[self.i][1]
+            return 'East'  # before any step, robot faces East at (0,0)
+        return self.pos[self.i][1]  # pos[0] is 'South' for when loop completes back to (0,0)
