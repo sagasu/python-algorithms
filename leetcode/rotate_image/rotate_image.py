@@ -1,13 +1,13 @@
+from typing import List
+
+
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
         n = len(matrix)
-        for layer in range(len(matrix)//2):
-            for offset in range(layer, len(matrix) - layer -1):
-                t = matrix[len(matrix) - offset -1][layer]
-                matrix[len(matrix) - offset -1][layer] = matrix[len(matrix) - layer -1][len(matrix)- offset -1]
-                matrix[n - layer -1][n - offset -1] = matrix[offset][n - layer -1]
-                matrix[offset][n - layer -1] = matrix[layer][offset]
-                matrix[layer][offset] = t
+        # Transpose
+        for i in range(n):
+            for j in range(i + 1, n):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        # Reverse each row
+        for row in matrix:
+            row.reverse()
