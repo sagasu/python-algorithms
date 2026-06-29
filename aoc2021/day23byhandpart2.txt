@@ -1,0 +1,9 @@
+#############
+#...........#
+###D#A#B#C###
+  #D#C#B#A#
+  #D#B#A#C#
+  #B#A#D#C#  
+  #########  
+
+It is used in python solution, so I am not solving part2 by hand.
