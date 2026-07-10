@@ -23,8 +23,10 @@ class Solution:
                 j += 1
             reach[i] = j
 
-        # Binary lifting: up[k][i] = position after 2^k furthest jumps from i
-        log = max(1, n.bit_length())
+        # Binary lifting: up[k][i] = position after 2^k furthest jumps from i.
+        # Need 2^(log-1) >= n so long chains (up to n-1 hops) are covered;
+        # n.bit_length() alone is one short for n > 2^(L-1) (e.g. n=1e5).
+        log = max(1, n.bit_length() + 1)
         up = [reach[:]]
         for k in range(1, log):
             prev = up[k - 1]
@@ -33,17 +35,17 @@ class Solution:
         def min_jumps(left: int, right: int) -> int:
             if left == right:
                 return 0
-            # Furthest position reachable with any number of jumps
-            if up[-1][left] < right:
-                return -1
-
+            # Take largest jumps that still land strictly before right, then +1.
+            # Final hop must actually reach; otherwise a gap blocks the path.
             cur = left
             ans = 0
             for k in range(log - 1, -1, -1):
                 if up[k][cur] < right:
                     cur = up[k][cur]
                     ans += 1 << k
-            return ans + 1
+            if reach[cur] >= right:
+                return ans + 1
+            return -1
 
         result = []
         for u, v in queries:
