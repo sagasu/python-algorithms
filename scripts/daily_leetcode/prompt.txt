@@ -1,0 +1,26 @@
+Solve today's LeetCode daily challenge in this checkout. The problem JSON has already been fetched. Read it from the path named in the last paragraph of this prompt. Do not browse for a different problem. If the JSON file is missing or has no titleSlug, stop without writing code.
+
+Write one Python 3 solution file:
+
+  leetcode/<folder>/<folder>.py
+
+`<folder>` is the `folder` field in the JSON (the title slug with hyphens turned into underscores). Use the `python3Stub` method signature unchanged, including the class name `Solution`.
+
+Match the recent solutions in this repo:
+
+- Import only the typing names you use.
+- Keep the algorithm in the solution method.
+- Put a short comment or docstring above the method that states the approach.
+- When the signature needs ListNode, TreeNode, or Node, define that class in this same file with the usual LeetCode fields so the file runs on its own.
+- Under `if __name__ == "__main__":`, run the official examples from the problem statement. Print `OK` or `FAIL` for each one. If any example fails, raise SystemExit(1).
+
+Run the file with this interpreter and fix the solution until every example passes:
+
+  D:\worek\anaconda3\python.exe
+
+Do not use `python`, `python3`, or `py` from PATH.
+
+Do not commit, push, switch branches, or edit any file other than that one solution. Do not add a README, tests package, or second implementation. Leave the working tree with only that new file.
+
+The problem JSON path is:
+{{PROBLEM_JSON}}
